@@ -78,3 +78,5 @@ while(True):
     elif(escolha_usuario == "3"):
         organizar_usuarios_nome(usuarios)
         visualizar_usuarios(usuarios)
+    else:
+        print("\nOpção indisponível, tente novamente.\n")
