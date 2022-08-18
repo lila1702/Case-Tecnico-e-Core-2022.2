@@ -54,6 +54,35 @@ def visualizar_usuarios(usuarios_db):
         
     print("-----------------------------------------\n")
 
+def filtrar_usuarios(usuarios_db):
+    print("\n-----------------------------------------")
+    print("Qual categoria de usuários deseja visualizar?")
+    print("[1] - Visualizar usuários da categoria \"Criança\"")
+    print("[2] - Visualizar usuários da categoria \"Adolescente\"")
+    print("[3] - Visualizar usuários da categoria \"Adulto\"")
+    print("[4] - Visualizar usuários da categoria \"Idoso\"")
+    print("[0] - Voltar")
+    
+    while(True):
+        escolha_usuario = int(input("\nDigite o número correspondente para selecionar a opção desejada: "))
+        # Caso o usuário digite um número negativo ou maior que 4.
+        if(escolha_usuario not in range(0,5)):
+            print("Opção inválida, tente novamente.")
+        elif(escolha_usuario == 0):
+            break
+        else:
+            for i in range(len(usuarios_db)):
+                if(escolha_usuario == 1 and usuarios_db[i][2] == "Criança"):
+                    print(f"{usuarios_db[i][0]} - {usuarios_db[i][1]} anos - {usuarios_db[i][2]}")
+                elif(escolha_usuario == 2 and usuarios_db[i][2] == "Adolescente"):
+                    print(f"{usuarios_db[i][0]} - {usuarios_db[i][1]} anos - {usuarios_db[i][2]}")
+                elif(escolha_usuario == 3 and usuarios_db[i][2] == "Adulto"):
+                    print(f"{usuarios_db[i][0]} - {usuarios_db[i][1]} anos - {usuarios_db[i][2]}")
+                elif(escolha_usuario == 4 and usuarios_db[i][2] == "Idoso"):
+                    print(f"{usuarios_db[i][0]} - {usuarios_db[i][1]} anos - {usuarios_db[i][2]}")
+        
+    print("-----------------------------------------\n")
+
 # Principal
 usuarios = []
 
@@ -63,9 +92,10 @@ while(True):
     print("[1] - Cadastrar Usuário")
     print("[2] - Visualizar Usuários (Priorizar ordem por idade)")
     print("[3] - Visualizar Usuários (Priorizar ordem por nome)")
+    print("[4] - Filtrar Usuários por Categoria de Idade.")
     print("[0] - Sair do Programa")
     
-    escolha_usuario = input("Digite selecione uma opção: ")
+    escolha_usuario = input("Digite o número correspondente para selecionar a opção desejada: ")
     if(escolha_usuario == "0"):
         break
     # Cadastro
@@ -78,5 +108,7 @@ while(True):
     elif(escolha_usuario == "3"):
         organizar_usuarios_nome(usuarios)
         visualizar_usuarios(usuarios)
+    elif(escolha_usuario == "4"):
+        filtrar_usuarios(usuarios)
     else:
         print("\nOpção indisponível, tente novamente.\n")
