@@ -32,7 +32,7 @@ Para realizar o cadastro de uma pessoa, o programa solicita o nome e a idade da 
 
 ### Funcionalidade 2 - Visualização das Pessoas Cadastradas:
 Há duas maneiras de visualização da lista de cadastros.
-- A primeira organiza primeiro as pessoas cadastradas pela suas idades, em ordem crescente, os mais novos no topo. Para aqueles que possuem a mesma idade, é colocado em ordem alfabética.
+- A primeira prioriza organizar as pessoas cadastradas pela suas idades, em ordem crescente, com os mais novos no topo. Para aqueles que possuem a mesma idade, é colocado em ordem alfabética.
 
 ![Print 3 - Visualização](https://user-images.githubusercontent.com/48594353/185534764-9e426aa2-6e85-45d7-bf00-d5be47891ecf.PNG)
 
